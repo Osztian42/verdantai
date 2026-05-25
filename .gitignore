@@ -2,4 +2,6 @@ venv/
 __pycache__/
 .ipynb_checkpoints/
 models/
-.DS_Store
+.DS_Store*.pkl
+*.pkl
+*.pkl
