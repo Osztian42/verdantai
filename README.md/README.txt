@@ -1,33 +1,38 @@
 # VerdantAI 🌱
 
-AI-driven environmental analysis and crop yield prediction using soil chemistry and climate data.
-
-## Project Goals
-This project explores how environmental conditions influence agricultural productivity using machine learning and scientific visualisation.
+AI-powered environmental intelligence dashboard for crop yield prediction and agricultural resilience modelling.
 
 ## Features
-- Exploratory Data Analysis
-- Environmental Correlation Modelling
-- Crop Yield Prediction
-- Botanical Data Visualisation
-- Machine Learning Pipelines
 
-## Technologies
+- Random Forest crop yield prediction
+- Interactive environmental controls
+- Crop and soil type selection
+- Environmental suitability scoring
+- Resilience assessment
+- Feature importance analysis
+- Botanical data visualisations
+- Plotly interactive charts
+
+## Tech Stack
+
 - Python
+- Streamlit
 - Pandas
 - Scikit-learn
-- Matplotlib
-- Seaborn
-- Jupyter
-- VS Code
+- Plotly
+- Joblib
 
-## Current Progress
-- Dataset exploration completed
-- Correlation analysis completed
-- Initial visualisation system implemented
+## Model
 
-## Future Plans
-- Interactive Streamlit dashboard
-- Predictive ML models
-- Climate stress analysis
-- Nature-inspired UI
+VerdantAI uses a Random Forest Regressor trained on crop yield and environmental factor data.
+
+## Screenshots
+
+Add dashboard screenshots here.
+
+## Future Improvements
+
+- SHAP explainability
+- Climate stress simulation
+- Weather API integration
+- Geospatial crop suitability mapping
