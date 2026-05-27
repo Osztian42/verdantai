@@ -20,10 +20,25 @@ DATA_PATH = BASE_DIR / "data" / "crop_yield_dataset.csv"
 MODEL_PATH = BASE_DIR / "notebooks" / "model.pkl"
 
 df = pd.read_csv(DATA_PATH)
-model = joblib.load(MODEL_PATH)
+from sklearn.ensemble import RandomForestRegressor
 
-X = df.drop(columns=["Crop_Yield", "Date", "Soil_Quality"])
-X = pd.get_dummies(X, drop_first=True)
+X_raw = df.drop(columns=["Crop_Yield", "Date", "Soil_Quality"])
+y = df["Crop_Yield"]
+
+X = pd.get_dummies(X_raw, drop_first=True)
+
+if MODEL_PATH.exists():
+    model = joblib.load(MODEL_PATH)
+else:
+    model = RandomForestRegressor(
+        n_estimators=50,
+        max_depth=12,
+        random_state=42,
+        n_jobs=-1
+    )
+    model.fit(X, y)
+
+
 
 
 # -----------------------------
